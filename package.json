@@ -1,0 +1,17 @@
+{
+  "name": "school-management-system",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:api": "npm run dev --workspace=apps/api/src",
+    "dev:desktop": "npm run dev --workspace=apps/desktop",
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:api\" \"npm run dev:desktop\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
